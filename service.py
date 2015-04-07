@@ -114,7 +114,7 @@ def Download(url, filename, pack, language): #standard input
                 
                 # Sanitize filenames - converting them to ASCII - and remove them from folders
 
-                f = xbmcvfs.File(dirfile)
+                f = open(dirfile, "r")
                 temp = f.read()
                 f.close()
                 xbmcvfs.delete(dirfile)
